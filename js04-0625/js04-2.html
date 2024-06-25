@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 血型判斷(大小寫不同)
+        // A=>A型
+        // a=>A型
+
+        // if-else-if
+
+        let blood = prompt('請輸入血型').trim();
+
+        // blood = blood.trim();   // 去除多餘空白 再重新指派回Blood變數
+        if (blood==null) {  //去除空白後的結果是沒有內容
+            document.write('您按了取消');
+        }else{
+            // 按了確定
+            blood = blood.trim();
+            if(blood=='') {
+            document.write('您尚未輸入血型');
+        }else if(blood=='a' || blood=='A') {
+            document.write('A型');
+        }else if(blood=='b' || blood=='B'){
+            document.write('B型');
+        }else if (blood=='o' || blood=='O') {
+            document.write('O型')
+        }else if (blood=='ab' || blood=='AB'||blood=='aB' || blood=='Ab') {
+            document.write('AB型')
+        }else{
+            document.write('輸入錯誤')
+            }
+        }
+        // 換行
+        document.write('<br>');
+        // switch
+        let blood2 = prompt('請輸入血型');
+        if (blood2 == null) {
+            document.write('您按了取消');
+        } else {
+            // 按了正確
+            switch (blood2.trim()) {
+                case '':
+                    document.write('您尚未輸入血型');
+                    break;
+                case 'A':
+                case 'a':
+                    document.write('A型');
+                    break;
+                case 'b':
+                case 'B':
+                    document.write('B型');
+                    break;
+                case 'o':
+                case 'O':
+                    document.write('O型');
+                    break;
+                case 'ab': 
+                case 'AB': 
+                case 'aB': 
+                case 'Ab':
+                    document.write('AB型');
+                    break;
+                default:
+                    document.write('輸入err');
+
+            }
+        }
+    </script>
+</body>
+
+</html>
