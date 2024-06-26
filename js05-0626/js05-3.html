@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ex7:
+        // 輸入彈出視窗=>prompt()
+        // 輸入運算起始值=>1
+        // 輸入運算結束值=>10
+        // 算出奇數和=>25
+        // 算出偶數和=>30
+
+        // 狀況1:起<迄
+        
+        let start = Number(prompt("請輸入運算起始值:"));
+        let end = Number(prompt("請輸入運算結束值:"));
+        
+        // 狀況2:起>迄
+        if (start > end) {
+            let temp = start;   //大的暫時給temp
+            start = end;    //小的給start
+            end = temp;     //大的給end
+        }
+
+        let tot1 = 0
+        let tot2 = 0
+        for (let i = start; i <= end; i++) {
+            if (i % 2 === 1) {
+                // 奇數
+                tot1 = tot1 + i;
+            } else {
+                // 偶數
+                tot2 = tot2 + i;
+            }
+        }
+        console.log(`${start}-${end}的奇數和=>${tot1}`);
+        console.log(`${start}-${end}的偶數和=>${tot2}`);
+        document.write('<hr>');
+    </script>
+</body>
+
+</html>
